@@ -2,7 +2,8 @@ import AjaxResult from "../common/AjaxResult";
 
 class SCGController {
 
-  async assignment2(): Promise<AjaxResult> {
+  async findXYZValue(): Promise<AjaxResult> {
+    
     const result = new AjaxResult();
     try {
 
