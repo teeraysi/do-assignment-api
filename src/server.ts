@@ -9,7 +9,7 @@ import { Request, Response } from 'express-serve-static-core';
 import { router as scgRouter } from './routers/scg';
 
 function startServer() {
-  const port = 3001;
+  const port = 7001;
   const app = express();
 
   // Form URL Encoded parser.
