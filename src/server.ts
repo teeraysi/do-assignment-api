@@ -4,6 +4,7 @@ dotenv.config();
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import * as compression from 'compression';
+import * as cors from 'cors';
 import { Request, Response } from 'express-serve-static-core';
 
 import { router as scgRouter } from './routers/scg';
@@ -21,6 +22,8 @@ function startServer() {
 
   // Body parser.
   app.use(bodyParser.json({ limit: '30mb' }));
+  
+  app.use(cors());
 
   // Compression data traffic
   app.use(compression()); // Compress all routes.
