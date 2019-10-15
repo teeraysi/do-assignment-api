@@ -6,10 +6,10 @@ import controller from '../controller/scgController';
 // =======================
 export const router = express.Router();
 
-router.post('/assignment2', assignment2);
+router.post('/find-xyz', findXYZ);
 router.post('/resturant', resturant);
 
-async function assignment2(req, res, next) {
+async function findXYZ(req, res, next) {
   
   const result = await controller.findXYZValue();    
   next([result, 200]);
@@ -18,7 +18,9 @@ async function assignment2(req, res, next) {
 
 async function resturant(req, res, next) {
   
-  const result = await controller.findPlace('Bangsue Bangkok');    
+  const { keyword } = req.body;
+
+  const result = await controller.findPlace(keyword);    
   next([result, 200]);
   
 }

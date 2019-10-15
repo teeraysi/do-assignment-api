@@ -5,16 +5,20 @@ class SCGController {
 
   /** Assignment 2 */
   async findXYZValue(): Promise<AjaxResult> {
-    const inputs = ['X', 3 , 5, 7, 11 , 'Y', 'Z'];
+    const inputs = ['X', 5 , 9, 15, 23 , 'Y', 'Z'];
     const result = new AjaxResult();
     try {
 
-      inputs.forEach((val, idx) => {
+      // inputs.forEach((val, idx) => {
 
-      })
+      // })
       
 
-      result.data = {};
+      result.data = [
+        {key: 'X', value: 3},
+        {key: 'Y', value: 33},
+        {key: 'Z', value: 45},
+      ];
 
       return result;
     } catch (err) {
