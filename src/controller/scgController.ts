@@ -5,20 +5,37 @@ class SCGController {
 
   /** Assignment 2 */
   async findXYZValue(): Promise<AjaxResult> {
+
+    const isLetter = (str) => { 
+      return str.toString().match(/^[A-Za-z]+$/) !== null;
+    }
+
+    const getSeriesValue = (nPosition) => {
+      return 3 + nPosition * (nPosition + 1);
+    }
+
     const inputs = ['X', 5 , 9, 15, 23 , 'Y', 'Z'];
     const result = new AjaxResult();
     try {
+      // Equalation
+      //  [X0] = 3
+      //  [Xn] = [X0] + (n * (n + 1))
 
-      // inputs.forEach((val, idx) => {
-
-      // })
+      const resultData = [];
+      
+      inputs.forEach((val, idx) => {
+        const bLetter = isLetter(val);
+        if (bLetter) {
+          resultData.push({
+            key: val,
+            value: getSeriesValue(idx)
+          });
+        }
+        // console.log(val + ' is letter = ', bLetter);
+      });
       
 
-      result.data = [
-        {key: 'X', value: 3},
-        {key: 'Y', value: 33},
-        {key: 'Z', value: 45},
-      ];
+      result.data = resultData;
 
       return result;
     } catch (err) {
