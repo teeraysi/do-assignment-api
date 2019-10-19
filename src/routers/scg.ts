@@ -7,7 +7,7 @@ import controller from '../controller/scgController';
 export const router = express.Router();
 
 router.post('/find-xyz', findXYZ);
-router.post('/restuarant', resturant);
+router.post('/restaurant', restaurant);
 
 async function findXYZ(req, res, next) {
   
@@ -16,7 +16,7 @@ async function findXYZ(req, res, next) {
   
 }
 
-async function resturant(req, res, next) {
+async function restaurant(req, res, next) {
   
   const { keyword } = req.body;
 

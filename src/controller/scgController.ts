@@ -46,7 +46,7 @@ class SCGController {
   }
 
   /**
-   * Find places by Type: Restuarant
+   * Find places by Type: Restaurant
    * Allow find by a given keyword.
    * @param keyword Keyword to search.
    * @returns JSON data.
