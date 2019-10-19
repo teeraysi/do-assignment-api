@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": ".",
+    "lib": ["es2017", "dom"],
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "listFiles": false,
+    "pretty": true,
+    
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },  
+  "include": [
+    "src/**/*", "config", "secret/backup_config/config.production.ts", "secret/backup_config/config.staging.ts", "secret/backup_config/config.localhost.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
